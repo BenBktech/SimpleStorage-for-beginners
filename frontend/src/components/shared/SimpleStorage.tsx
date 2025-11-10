@@ -52,7 +52,7 @@ const SimpleStorage = () => {
         const numberChangedEvents = await publicClient.getLogs({
             address: CONTRACT_ADDRESS,
             event: parseAbiItem('event NumberChanged(address indexed by, uint256 number)'),
-            fromBlock: 0n,        // Depuis le premier block
+            fromBlock: 9601133n,        // Depuis le premier block
             toBlock: 'latest'     // Jusqu'au dernier block miné
         });
 

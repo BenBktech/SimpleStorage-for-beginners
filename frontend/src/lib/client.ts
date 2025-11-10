@@ -12,10 +12,10 @@ Ce fichier crée un "client public" qui permet de :
 */
 
 import { createPublicClient, http } from 'viem'
-import { hardhat } from 'viem/chains'
+import { sepolia } from 'viem/chains'
 
 // Création du client connecté à la blockchain Hardhat locale
 export const publicClient = createPublicClient({
-  chain: hardhat,      // Réseau Hardhat (localhost:8545)
-  transport: http()    // Communication via HTTP (RPC)
+  chain: sepolia,      // Réseau Hardhat (localhost:8545)
+  transport: http(process.env.SEPOLIA_RPC_URL)    // Communication via HTTP (RPC)
 })
